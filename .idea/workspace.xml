@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cf49407-fa03-46b6-92ee-c2d62b350cf9" name="Changes" comment="Merge remote-tracking branch 'origin/victor' into victor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Vimag83&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c8651a42-3954-4e77-b27c-99e746582e56" />
+        <option name="url" value="https://github.com/Vimag83/repositorioClinicaGrupal.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2UV9fS3GBSlwfTVeQDp3Opj9iQ3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "victor",
+    "last_opened_file_path": "C:/Users/victo/OneDrive/Escritorio/universidad/Semestre 7/Infraestructura de Comunicaciones/practica/BancoTCP/banco_tcp_redes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "0df2c9fb72002a12745d72036464a8e5",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ProyectoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="clinica.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.clinica.ProyectoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.clinica.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ProyectoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cf49407-fa03-46b6-92ee-c2d62b350cf9" name="Changes" comment="" />
+      <created>1693013991985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693013991985</updated>
+      <workItem from="1693013992947" duration="1887000" />
+      <workItem from="1693078589051" duration="740000" />
+      <workItem from="1693080963267" duration="595000" />
+      <workItem from="1693441533541" duration="6008000" />
+      <workItem from="1693609109269" duration="841000" />
+      <workItem from="1693615614104" duration="3192000" />
+      <workItem from="1693681818779" duration="49000" />
+      <workItem from="1694034822663" duration="1740000" />
+      <workItem from="1694038852274" duration="24000" />
+      <workItem from="1694038893367" duration="20000" />
+      <workItem from="1694041933549" duration="419000" />
+      <workItem from="1694222435053" duration="5894000" />
+      <workItem from="1694289229077" duration="1642000" />
+      <workItem from="1694471843521" duration="605000" />
+      <workItem from="1694550560817" duration="2117000" />
+      <workItem from="1694617822376" duration="9128000" />
+      <workItem from="1694632869959" duration="615000" />
+      <workItem from="1694641465273" duration="3272000" />
+      <workItem from="1694646190944" duration="260000" />
+      <workItem from="1694646481820" duration="933000" />
+      <workItem from="1694669677457" duration="1842000" />
+      <workItem from="1694827554013" duration="1304000" />
+      <workItem from="1694892269657" duration="422000" />
+    </task>
+    <task id="LOCAL-00001" summary="Inicio de Codigo en Git">
+      <option name="closed" value="true" />
+      <created>1693618434260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693618434260</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Inicio de Codigo en Git">
+      <option name="closed" value="true" />
+      <created>1694222878068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694222878068</updated>
+    </task>
+    <task id="LOCAL-00003" summary="version subida en Git">
+      <option name="closed" value="true" />
+      <created>1694225332273</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694225332273</updated>
+    </task>
+    <task id="LOCAL-00004" summary="creacion de carpeta modelo entidades en Git">
+      <option name="closed" value="true" />
+      <created>1694225953514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694225953514</updated>
+    </task>
+    <task id="LOCAL-00005" summary="creacion de carpeta modelo entidades en Git">
+      <option name="closed" value="true" />
+      <created>1694226037715</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694226037715</updated>
+    </task>
+    <task id="LOCAL-00006" summary="creacion de clase Usuario en Git">
+      <option name="closed" value="true" />
+      <created>1694226670495</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694226670495</updated>
+    </task>
+    <task id="LOCAL-00007" summary="creacion de clase Usuario en Git">
+      <option name="closed" value="true" />
+      <created>1694226705368</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694226705368</updated>
+    </task>
+    <task id="LOCAL-00008" summary="creacion de clase Usuario en Git">
+      <option name="closed" value="true" />
+      <created>1694227348821</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694227348821</updated>
+    </task>
+    <task id="LOCAL-00009" summary="creacion de clase Usuario en Git">
+      <option name="closed" value="true" />
+      <created>1694227454529</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694227454529</updated>
+    </task>
+    <task id="LOCAL-00010" summary="creacion de rama victor en Git">
+      <option name="closed" value="true" />
+      <created>1694618216645</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694618216645</updated>
+    </task>
+    <task id="LOCAL-00011" summary="creacion de clases Administrador, ciudad, cuenta, EPS, Especialidad, estado Pqrs, medico, mensaje y tipoSangre con get, set y equals">
+      <option name="closed" value="true" />
+      <created>1694626808109</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694626808109</updated>
+    </task>
+    <task id="LOCAL-00012" summary="creacion de foraneas clases anteriores y tablas en Bases de Datos">
+      <option name="closed" value="true" />
+      <created>1694669796854</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694669796854</updated>
+    </task>
+    <task id="LOCAL-00013" summary="creacion de foraneas clases anteriores y tablas en Bases de Datos">
+      <option name="closed" value="true" />
+      <created>1694669891349</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694669891349</updated>
+    </task>
+    <task id="LOCAL-00014" summary="creacion de foraneas clases anteriores y tablas en Bases de Datos">
+      <option name="closed" value="true" />
+      <created>1694669986176</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694669986176</updated>
+    </task>
+    <task id="LOCAL-00015" summary="creacion de foraneas clases anteriores y tablas en Bases de Datos">
+      <option name="closed" value="true" />
+      <created>1694670071489</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694670071489</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/victor' into victor">
+      <option name="closed" value="true" />
+      <created>1694670434520</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1694670434520</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/victor' into victor">
+      <option name="closed" value="true" />
+      <created>1694670789151</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1694670789151</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/victor' into victor">
+      <option name="closed" value="true" />
+      <created>1694670805484</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1694670805484</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inicio de Codigo en Git" />
+    <MESSAGE value="version subida en Git" />
+    <MESSAGE value="creacion de carpeta modelo entidades en Git" />
+    <MESSAGE value="creacion de clase Usuario en Git" />
+    <MESSAGE value="creacion de rama victor en Git" />
+    <MESSAGE value="creacion de clases Administrador, ciudad, cuenta, EPS, Especialidad, estado Pqrs, medico, mensaje y tipoSangre con get, set y equals" />
+    <MESSAGE value="creacion de foraneas clases anteriores y tablas en Bases de Datos" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/victor' into victor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/victor' into victor" />
+  </component>
+</project>
