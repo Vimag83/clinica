@@ -24,5 +24,5 @@ public class Cuenta implements Serializable{
     @Id
     private Integer codigo;
     private String correo;
-    private  String password;
+    private String password;
 }
