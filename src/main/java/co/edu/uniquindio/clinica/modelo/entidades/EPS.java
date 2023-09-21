@@ -5,4 +5,5 @@ import jakarta.persistence.Id;
 import java.io.Serializable;
 
 public enum EPS {
+    sura, coomeva
 }
