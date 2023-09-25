@@ -1,7 +1,7 @@
 package co.edu.uniquindio.clinica.dto;
 
 import co.edu.uniquindio.clinica.modelo.entidades.EPS;
-import co.edu.uniquindio.clinica.modelo.entidades.Tipo_sangre;
+import co.edu.uniquindio.clinica.modelo.entidades.TipoSangre;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +13,7 @@ public record DetalleAtencionMedicaDTO(
         String tratamiento,
         String notasMedicas,
         String diagnostico,
-        Tipo_sangre tipoSangre,
+        TipoSangre tipoSangre,
         EPS eps
 ) {
 }
