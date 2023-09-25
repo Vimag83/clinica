@@ -1,13 +1,13 @@
 package co.edu.uniquindio.clinica.dto;
 
-import co.edu.uniquindio.clinica.modelo.entidades.Estado_PQRS;
+import co.edu.uniquindio.clinica.modelo.entidades.EstadoPQRS;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 public record DetallePQRSDTO(
         int codigo,
-        Estado_PQRS estado,
+        EstadoPQRS estado,
         String motivoPQRS,
         String nombrePaciente,
         String nombreMedico,
