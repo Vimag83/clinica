@@ -1,6 +1,8 @@
 package co.edu.uniquindio.clinica.modelo.servicios;
 
+import co.edu.uniquindio.clinica.dto.LoginDTO;
+
 public interface AutenticacionServicio {
 
-    void login(LoginDTO loginDTO) throws exeption;
+    void login(LoginDTO loginDTO) throws Exception;
 }
