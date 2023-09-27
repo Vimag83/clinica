@@ -15,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Setter@Getter
 public class Cita extends Paciente implements Serializable {
+
     private String codigocita;
     private LocalDate fechaCreacion;
     private LocalDate fechaCita;

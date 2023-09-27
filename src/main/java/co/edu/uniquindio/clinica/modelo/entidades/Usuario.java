@@ -13,17 +13,20 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Usuario extends Cuenta implements Serializable{
-
-    @ManyToOne
-    private Ciudad ciudad;
-
-    @OneToMany(mappedBy = "usuario")
-    private List<Paciente> pacientes;
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public class Usuario extends Cuenta implements Serializable {
 
     private String cedula;
     private String nombre;
     private String urlFoto;
     private String telefono;
 
+    @ManyToOne
+    private Ciudad ciudad;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Paciente> pacientes;
 }
+
+
+
