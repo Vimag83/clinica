@@ -1,8 +1,9 @@
-package co.edu.uniquindio.clinica.modelo.servicios;
+package co.edu.uniquindio.clinica.servicios;
 
 public interface CitaServicios {
 
     void agendarCita();
+    void cancelarCita();
     void listarCitasPaciente();//codigo paciente y codigo medico
     void verDetalleCita();
     void filtrarCitasPorMedicoFecha();

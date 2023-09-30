@@ -1,4 +1,4 @@
-package co.edu.uniquindio.clinica.modelo.servicios;
+package co.edu.uniquindio.clinica.servicios;
 
 public interface PQRServicios {
 

@@ -10,12 +10,16 @@ import java.io.Serializable;
 import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
-@Setter@Getter
+@Setter
+@Getter
 public class Pqrs extends Cita implements Serializable {
     private LocalDate fechaCreacion;
     private String tipo;
+    private  String estado;
     private String motivo;
+
 
     @ManyToOne
     private Cita cita;
+
 }

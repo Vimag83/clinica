@@ -19,4 +19,5 @@ public class Medico extends Usuario{
     private Especialidad especialidad;
 
 
+
 }
