@@ -1,6 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -15,7 +16,8 @@ import java.util.List;
 @NoArgsConstructor
 @Setter@Getter
 public class Cita extends Paciente implements Serializable {
-    private String codigocita;
+   @Id
+    private Integer codigocita;
     private LocalDate fechaCreacion;
     private LocalDate fechaCita;
 

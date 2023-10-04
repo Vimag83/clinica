@@ -23,8 +23,9 @@ public class Usuario extends Cuenta implements Serializable{
 
     private String cedula;
     private String nombre;
+
     private String urlFoto;
     private String telefono;
-    private boolean EstadoUsuario;
+    private EstadoUsuario EstadoUsuario;
 
 }

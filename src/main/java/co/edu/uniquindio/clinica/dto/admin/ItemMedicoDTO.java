@@ -1,9 +1,12 @@
 package co.edu.uniquindio.clinica.dto.admin;
 
+import co.edu.uniquindio.clinica.modelo.entidades.Especialidad;
+
 public record ItemMedicoDTO(
 
-        Integer codigo, String nombre,
+        Integer codigo,
+        String nombre,
         String cedula,
         String urlFoto,
-        co.edu.uniquindio.clinica.modelo.entidades.Especialidad especialidad) {
+       Especialidad especialidad) {
 }

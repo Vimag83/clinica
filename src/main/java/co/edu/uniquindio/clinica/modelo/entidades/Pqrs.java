@@ -29,7 +29,7 @@ public class Pqrs extends Cita implements Serializable {
     private String tipo;
 
     @Column(nullable = false)
-    private  String estado;
+    private  EstadoPQRS estado;
 
     @Lob
     @Column(nullable = false)

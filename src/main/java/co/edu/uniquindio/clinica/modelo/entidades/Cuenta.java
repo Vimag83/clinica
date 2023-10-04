@@ -20,12 +20,13 @@ public class Cuenta implements Serializable{
     @OneToMany(mappedBy = "cuenta")
     private List<Mensaje> mensajes;
 
-    @Getter
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
     private String correo;
     private String password;
+    private EstadoUsuario estadoUsuario;
 
 }
