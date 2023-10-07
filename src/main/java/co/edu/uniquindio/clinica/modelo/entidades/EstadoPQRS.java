@@ -11,5 +11,4 @@ public enum EstadoPQRS {
         EstadoPQRS(String nombre) {
             this.nombre = nombre;
         }
-
 }

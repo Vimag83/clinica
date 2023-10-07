@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Setter@Getter
 public class Atencion extends Cita implements Serializable {
+
     private String diagnostico, tratamiento, notasMedicas;
     //Este creo que debe ser de uno a uno con la cita, preguntar al profe
 

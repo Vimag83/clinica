@@ -13,18 +13,21 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Getter@Setter
+@Getter
+@Setter
 @NoArgsConstructor
 public class Paciente extends Usuario implements Serializable {
+
+    private LocalDate fechaNacimiento;
+    private String alergias;
+
     @Column(name = "cedula", unique = true)
     private String cedula;
 
+    // No necesitas la relación @ManyToOne a Usuario aquí
     @ManyToOne
     private Usuario usuario;
 
     @OneToMany(mappedBy = "paciente")
     private List<Cita> citas;
-
-    private LocalDate fechaNacimiento;
-    private String alergias;
 }
