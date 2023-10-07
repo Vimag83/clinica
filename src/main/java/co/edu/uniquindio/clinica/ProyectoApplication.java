@@ -3,7 +3,6 @@ package co.edu.uniquindio.clinica;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
 public class ProyectoApplication {
 
@@ -12,5 +11,3 @@ public class ProyectoApplication {
         SpringApplication.run(ProyectoApplication.class, args);
     }
 }
-
-///comentario

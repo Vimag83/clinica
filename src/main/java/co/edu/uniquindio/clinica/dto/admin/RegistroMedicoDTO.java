@@ -2,13 +2,14 @@ package co.edu.uniquindio.clinica.dto.admin;
 
 
 import co.edu.uniquindio.clinica.modelo.entidades.Ciudad;
-import co.edu.uniquindio.clinica.modelo.entidades.Especialidad;
+import co.edu.uniquindio.clinica.enums.Especialidad;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 import java.util.List;
 
 public record RegistroMedicoDTO(
+        @NotNull int codigo,
         @NotNull @Length(max = 200) String nombre,
         @NotNull @Length(max = 10) String cedula,
         @NotNull Ciudad ciudad,

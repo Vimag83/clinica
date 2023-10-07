@@ -1,7 +1,7 @@
 package co.edu.uniquindio.clinica.dto;
 
-import co.edu.uniquindio.clinica.modelo.entidades.Especialidad;
-import co.edu.uniquindio.clinica.modelo.entidades.EstadoPQRS;
+import co.edu.uniquindio.clinica.enums.Especialidad;
+import co.edu.uniquindio.clinica.enums.EstadoPQRS;
 
 import java.time.LocalDateTime;
 import java.util.List;

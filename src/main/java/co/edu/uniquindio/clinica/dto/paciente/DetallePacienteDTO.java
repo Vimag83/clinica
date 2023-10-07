@@ -1,11 +1,11 @@
 package co.edu.uniquindio.clinica.dto.paciente;
 
 import co.edu.uniquindio.clinica.modelo.entidades.Ciudad;
-import co.edu.uniquindio.clinica.modelo.entidades.EPS;
-import co.edu.uniquindio.clinica.modelo.entidades.TipoSangre;
+import co.edu.uniquindio.clinica.enums.EPS;
+import co.edu.uniquindio.clinica.enums.TipoSangre;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public record DetallePacienteDTO(
         int codigo,

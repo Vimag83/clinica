@@ -1,4 +1,4 @@
-package co.edu.uniquindio.clinica.modelo.entidades;
+package co.edu.uniquindio.clinica.enums;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.io.Serializable;
 import java.util.List;
 
-@NoArgsConstructor
+
 
 public enum EstadoUsuario {
         ACTIVO,

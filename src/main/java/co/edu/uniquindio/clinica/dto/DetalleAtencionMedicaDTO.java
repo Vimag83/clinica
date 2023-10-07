@@ -1,7 +1,7 @@
 package co.edu.uniquindio.clinica.dto;
 
-import co.edu.uniquindio.clinica.modelo.entidades.EPS;
-import co.edu.uniquindio.clinica.modelo.entidades.TipoSangre;
+import co.edu.uniquindio.clinica.enums.EPS;
+import co.edu.uniquindio.clinica.enums.TipoSangre;
 
 import java.time.LocalDateTime;
 
