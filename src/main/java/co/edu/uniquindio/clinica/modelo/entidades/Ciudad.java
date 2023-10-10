@@ -3,6 +3,7 @@ package co.edu.uniquindio.clinica.modelo.entidades;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,7 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Ciudad implements Serializable{
+public class Ciudad extends Usuario implements Serializable{
 
     @OneToMany(mappedBy="ciudad")
     private List<Usuario> usuarios;
