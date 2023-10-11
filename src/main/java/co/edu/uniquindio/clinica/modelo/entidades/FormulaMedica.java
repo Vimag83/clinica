@@ -21,5 +21,4 @@ public class FormulaMedica implements Serializable {
 
     @ManyToOne
     private OrdenMedica ordenMedica;
-    //creo que tambien es de uno a uno con la orden medica
 }

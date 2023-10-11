@@ -3,13 +3,15 @@ package co.edu.uniquindio.clinica.servicios.impl;
 import co.edu.uniquindio.clinica.dto.*;
 import co.edu.uniquindio.clinica.dto.admin.ItemCitaAdminDTO;
 import co.edu.uniquindio.clinica.dto.paciente.*;
-import co.edu.uniquindio.clinica.modelo.entidades.Paciente;
-import co.edu.uniquindio.clinica.repositorios.PacienteRepo;
-import co.edu.uniquindio.clinica.servicios.PacienteServicio;
+import co.edu.uniquindio.clinica.enums.EstadoPQRS;
+import co.edu.uniquindio.clinica.modelo.entidades.*;
+import co.edu.uniquindio.clinica.repositorios.*;
+import co.edu.uniquindio.clinica.servicios.interfaces.PacienteServicio;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +22,10 @@ import java.util.Optional;
 public class PacienteServicioImpl implements PacienteServicio {
 
     private final PacienteRepo pacienteRepo;
+    private final CitaRepo citaRepo;
+    private final PQRSRepo pqrsRepo;
+    private final CuentaRepo cuentaRepo;
+    private final MensajeRepo mensajeRepo;
 
 
     private boolean estaRepetidaCedula(String cedula) {
@@ -128,6 +134,7 @@ public class PacienteServicioImpl implements PacienteServicio {
         }
         @Override
         public List<ItemPacienteDTO> listarTodos () {
+
             List<Paciente> pacientes = pacienteRepo.findAll();
             List<ItemPacienteDTO> repuesta = new ArrayList<>();
 //Hacemos un mapeo de cada uno de los objetos de tipo Paciente a objetos de tipo ItemPacienteDTO
@@ -155,27 +162,107 @@ public class PacienteServicioImpl implements PacienteServicio {
 
     @Override
     public int crearPQRS(RegistroPQRSDTO registroPQRSDTO) throws Exception {
-        return 0;
+        Optional<Paciente> pacienteOptional = pacienteRepo.findById(registroPQRSDTO.codigoPaciente());
+        Optional<Cita> citaOptional = citaRepo.findById(registroPQRSDTO.codigoCita());
+        long countPQRSActivas = pqrsRepo.countByPacienteCodigoAndEstado(registroPQRSDTO.codigoPaciente(), "Activa");
+
+        Pqrs pqrs = new Pqrs();
+        pqrs.setTipo(registroPQRSDTO.tipoPQRS());
+        pqrs.setMotivo(registroPQRSDTO.motivo());
+        new ArrayList<>();
+        pqrs.setEstado(EstadoPQRS.ABIERTA);
+
+        Pqrs nuevaPqrs = pqrsRepo.save(pqrs);
+        return nuevaPqrs.getCodigoPqrs();
     }
 
     @Override
     public List<ItemPQRSDTO> listarPQRSPaciente(int codigoPaciente) throws Exception {
-        return null;
+        List<Pqrs> listaPqrs = pqrsRepo.findAllByCita_PacienteCodigo(codigoPaciente);// reemplaza selec *from
+        List<ItemPQRSDTO> respuesta = new ArrayList<>();
+
+
+        for (Pqrs p : listaPqrs) {
+            respuesta.add(new ItemPQRSDTO(
+                    p.getCodigoPqrs(),
+                    p.getEstado(),
+                    p.getMotivo(),
+                    p.getFechaCreacion(),
+                    p.getCita().getPaciente().getNombre()
+
+            ));
+        }
+
+
+        return respuesta;
     }
 
     @Override
     public DetallePQRSDTO verDetallePQRS(int codigo) throws Exception {
-        return null;
+        Optional<Pqrs> opcional = pqrsRepo.findById(codigo);
+
+        if (opcional.isEmpty()) {
+
+            throw new Exception("El codigo " + codigo + " no esta asociado a ningun PQRS");
+        }
+
+        Pqrs pqrs = opcional.get();
+
+        return new DetallePQRSDTO(
+
+                pqrs.getCodigoPqrs(),
+                pqrs.getEstado(),
+                pqrs.getMotivo(),
+                pqrs.getCita().getPaciente().getNombre(),
+                pqrs.getCita().getMedico().getNombre(),
+                pqrs.getCita().getMedico().getEspecialidad(),
+                pqrs.getFechaCreacion(),
+                new ArrayList<>()
+        );
     }
 
     @Override
     public int responderPQRS(RegistroRespuestaDTO registroRespuestaDTO) throws Exception {
-        return 0;
+        // Se Obtiene el PQRS
+        Optional<Pqrs> opcionalPqrs = pqrsRepo.findById(registroRespuestaDTO.codigoPQRS());
+
+        if (opcionalPqrs.isEmpty()) {
+            throw new Exception("El codigo" + registroRespuestaDTO.codigoPQRS() + "no esta asociado a ningun PQRS");
+        }
+        // Se Obtiene la cuenta
+        Optional<Cuenta> opcionalCuenta = cuentaRepo.findById(registroRespuestaDTO.codigoCuenta());
+
+        if (opcionalCuenta.isEmpty()) {
+            throw new Exception("El codigo" + registroRespuestaDTO.codigoCuenta() + "no esta asociado a ninguna cuenta");
+        }
+
+        Mensaje mensaje = new Mensaje();
+        mensaje.setFechaCreacion(LocalDateTime.now());
+        mensaje.setContenido(registroRespuestaDTO.mensaje());
+        mensaje.setPqrs(opcionalPqrs.get());
+        mensaje.setCuenta(opcionalCuenta.get());
+
+        return mensajeRepo.save(mensaje).getCodigo();
     }
 
     @Override
     public List<ItemCitaAdminDTO> listarCitasPaciente(int codigoPaciente) throws Exception {
-        return null;
+        List<Cita> listaCitasPaciente = citaRepo.findAll();
+        List<ItemCitaAdminDTO> respuesta = new ArrayList<>();
+
+        for (Cita c : listaCitasPaciente ){
+            respuesta.add(new ItemCitaAdminDTO(
+                    c.getCodigocita(),
+                    c.getPaciente().getNombre(),
+                    c.getPaciente().getCedula(),
+                    c.getMedico().getNombre(),
+                    c.getMedico().getEspecialidad(),
+                    c.getEstadoCita(),
+                    c.getFechadeAtencion()
+
+            ));
+        }
+        return respuesta;
     }
 
     @Override

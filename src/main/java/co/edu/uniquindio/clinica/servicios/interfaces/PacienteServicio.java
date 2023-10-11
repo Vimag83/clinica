@@ -1,4 +1,4 @@
-package co.edu.uniquindio.clinica.servicios;
+package co.edu.uniquindio.clinica.servicios.interfaces;
 
 import co.edu.uniquindio.clinica.dto.*;
 import co.edu.uniquindio.clinica.dto.admin.ItemCitaAdminDTO;

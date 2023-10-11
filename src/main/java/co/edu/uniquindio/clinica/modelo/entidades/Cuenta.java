@@ -19,13 +19,13 @@ public class Cuenta implements Serializable{
     @EqualsAndHashCode.Include
     private Integer codigo;
 
-    @OneToMany(mappedBy = "cuenta")
-    private List<Mensaje> mensajes;
-
     @Column(name = "correo", unique = true, nullable = false)
     private String correo;
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @OneToMany(mappedBy = "cuenta")
+    private List<Mensaje> mensajes;
 
 }

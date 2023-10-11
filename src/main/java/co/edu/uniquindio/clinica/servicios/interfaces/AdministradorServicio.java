@@ -24,12 +24,7 @@ public interface AdministradorServicio {
 
     List<ItemPQRSDTO> listarPQRS() throws Exception;
 
-
-
     DetallePQRSDTO verDetallePQRS(int codigo) throws Exception;
-
-
-
 
     int responderPQRS(RegistroRespuestaDTO registroRespuestaDTO) throws Exception;
 

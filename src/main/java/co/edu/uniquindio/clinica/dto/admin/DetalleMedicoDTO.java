@@ -6,6 +6,7 @@ import co.edu.uniquindio.clinica.enums.Especialidad;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public record DetalleMedicoDTO(
         String nombre,
 
         @NotNull
-        @Length(max =  10)
+        @UniqueElements @Length(max =  10)
         String cedula,
 
         @NotNull
@@ -29,7 +30,7 @@ public record DetalleMedicoDTO(
         @Length(max =  80)
         String correo,
         List<HorarioDTO> horarios,
-        Especialidad  especialidad,
+        @NotNull Especialidad  especialidad,
         DiaLibre diaLibre,
         @NotNull
         Ciudad ciudad,

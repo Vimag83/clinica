@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface PacienteRepo extends JpaRepository<Paciente, Integer> {
     Paciente findByCedula(String cedula);
     Paciente findByCorreo(String correo);
-
     Paciente findAllByCodigo(int codigo);
 }

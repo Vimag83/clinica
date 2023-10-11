@@ -1,0 +1,223 @@
+Index: src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.edu.uniquindio.clinica.modelo.entidades;\r\n\r\nimport jakarta.persistence.Column;\r\nimport jakarta.persistence.Entity;\r\nimport jakarta.persistence.ManyToOne;\r\nimport jakarta.persistence.OneToMany;\r\nimport lombok.Getter;\r\nimport lombok.NoArgsConstructor;\r\nimport lombok.Setter;\r\n\r\nimport java.io.Serializable;\r\nimport java.time.LocalDate;\r\nimport java.util.List;\r\n\r\n@Entity\r\n@Getter@Setter\r\n@NoArgsConstructor\r\npublic class Paciente extends Usuario implements Serializable {\r\n    @Column(name = \"cedula\", unique = true)\r\n    private String cedula;\r\n\r\n    @ManyToOne\r\n    private Usuario usuario;\r\n\r\n    @OneToMany(mappedBy = \"paciente\")\r\n    private List<Cita> citas;\r\n\r\n    private LocalDate fechaNacimiento;\r\n    private String alergias;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java b/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java
+--- a/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java	(revision d74e963175eca82c57272336afbbd3b823f965e0)
++++ b/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java	(date 1696911980844)
+@@ -16,6 +16,7 @@
+ @Getter@Setter
+ @NoArgsConstructor
+ public class Paciente extends Usuario implements Serializable {
++
+     @Column(name = "cedula", unique = true)
+     private String cedula;
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1cf49407-fa03-46b6-92ee-c2d62b350cf9\" name=\"Changes\" comment=\"Merge remote-tracking branch 'origin/victor' into victor\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/EPS.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/EPS.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/application.properties\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Vimag83&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"c8651a42-3954-4e77-b27c-99e746582e56\" />\r\n        <option name=\"url\" value=\"https://github.com/Vimag83/repositorioClinicaGrupal.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2UV9fS3GBSlwfTVeQDp3Opj9iQ3\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/aura1/Documents/Jonathan/Programacion Avanzada/Clinica/Clinica\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"spring.configuration.checksum\": \"0df2c9fb72002a12745d72036464a8e5\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"ProyectoApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"clinica.main\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"co.edu.uniquindio.clinica.ProyectoApplication\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"co.edu.uniquindio.clinica.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1cf49407-fa03-46b6-92ee-c2d62b350cf9\" name=\"Changes\" comment=\"\" />\r\n      <created>1693013991985</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1693013991985</updated>\r\n      <workItem from=\"1693013992947\" duration=\"1887000\" />\r\n      <workItem from=\"1693078589051\" duration=\"740000\" />\r\n      <workItem from=\"1693080963267\" duration=\"595000\" />\r\n      <workItem from=\"1693441533541\" duration=\"6008000\" />\r\n      <workItem from=\"1693609109269\" duration=\"841000\" />\r\n      <workItem from=\"1693615614104\" duration=\"3192000\" />\r\n      <workItem from=\"1693681818779\" duration=\"49000\" />\r\n      <workItem from=\"1694034822663\" duration=\"1740000\" />\r\n      <workItem from=\"1694038852274\" duration=\"24000\" />\r\n      <workItem from=\"1694038893367\" duration=\"20000\" />\r\n      <workItem from=\"1694041933549\" duration=\"419000\" />\r\n      <workItem from=\"1694222435053\" duration=\"5894000\" />\r\n      <workItem from=\"1694289229077\" duration=\"1642000\" />\r\n      <workItem from=\"1694471843521\" duration=\"605000\" />\r\n      <workItem from=\"1694550560817\" duration=\"2117000\" />\r\n      <workItem from=\"1694617822376\" duration=\"9128000\" />\r\n      <workItem from=\"1694632869959\" duration=\"615000\" />\r\n      <workItem from=\"1694641465273\" duration=\"3272000\" />\r\n      <workItem from=\"1694646190944\" duration=\"260000\" />\r\n      <workItem from=\"1694646481820\" duration=\"933000\" />\r\n      <workItem from=\"1694669677457\" duration=\"1842000\" />\r\n      <workItem from=\"1694827554013\" duration=\"1304000\" />\r\n      <workItem from=\"1694892269657\" duration=\"422000\" />\r\n      <workItem from=\"1695239238488\" duration=\"4460000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Inicio de Codigo en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1693618434260</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1693618434260</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Inicio de Codigo en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694222878068</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694222878068</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"version subida en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694225332273</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694225332273</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"creacion de carpeta modelo entidades en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694225953514</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694225953514</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"creacion de carpeta modelo entidades en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694226037715</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694226037715</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"creacion de clase Usuario en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694226670495</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694226670495</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"creacion de clase Usuario en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694226705368</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694226705368</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"creacion de clase Usuario en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694227348821</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694227348821</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"creacion de clase Usuario en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694227454529</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694227454529</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"creacion de rama victor en Git\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694618216645</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694618216645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"creacion de clases Administrador, ciudad, cuenta, EPS, Especialidad, estado Pqrs, medico, mensaje y tipoSangre con get, set y equals\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694626808109</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694626808109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"creacion de foraneas clases anteriores y tablas en Bases de Datos\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694669796854</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694669796854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"creacion de foraneas clases anteriores y tablas en Bases de Datos\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694669891349</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694669891349</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"creacion de foraneas clases anteriores y tablas en Bases de Datos\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694669986176</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694669986176</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"creacion de foraneas clases anteriores y tablas en Bases de Datos\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694670071489</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694670071489</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Merge remote-tracking branch 'origin/victor' into victor\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694670434520</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694670434520</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Merge remote-tracking branch 'origin/victor' into victor\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694670789151</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694670789151</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Merge remote-tracking branch 'origin/victor' into victor\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694670805484</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694670805484</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"19\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"origin/master\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"HEAD\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Inicio de Codigo en Git\" />\r\n    <MESSAGE value=\"version subida en Git\" />\r\n    <MESSAGE value=\"creacion de carpeta modelo entidades en Git\" />\r\n    <MESSAGE value=\"creacion de clase Usuario en Git\" />\r\n    <MESSAGE value=\"creacion de rama victor en Git\" />\r\n    <MESSAGE value=\"creacion de clases Administrador, ciudad, cuenta, EPS, Especialidad, estado Pqrs, medico, mensaje y tipoSangre con get, set y equals\" />\r\n    <MESSAGE value=\"creacion de foraneas clases anteriores y tablas en Bases de Datos\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/victor' into victor\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge remote-tracking branch 'origin/victor' into victor\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d74e963175eca82c57272336afbbd3b823f965e0)
++++ b/.idea/workspace.xml	(date 1696911980840)
+@@ -5,9 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="1cf49407-fa03-46b6-92ee-c2d62b350cf9" name="Changes" comment="Merge remote-tracking branch 'origin/victor' into victor">
++      <change afterPath="$PROJECT_DIR$/src.rar" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/EPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/EPS.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Paciente.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,6 +18,18 @@
+     <projectState path="$PROJECT_DIR$">
+       <ProjectState />
+     </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <projects_view>
++          <tree_state>
++            <expand />
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -29,7 +41,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="main" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -62,31 +74,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RequestMappingsPanelOrder0": "0",
+-    "RequestMappingsPanelOrder1": "1",
+-    "RequestMappingsPanelWidth0": "75",
+-    "RequestMappingsPanelWidth1": "75",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "main",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "last_opened_file_path": "C:/Users/aura1/Documents/Jonathan/Programacion Avanzada/Clinica/Clinica",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "spring.configuration.checksum": "0df2c9fb72002a12745d72036464a8e5",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;jonathan&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;D:/Programacion avanzada IDEA/IntelliJ IDEA 2023.2/ClinicaProyecto&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;0df2c9fb72002a12745d72036464a8e5&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration name="ProyectoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+       <module name="clinica.main" />
+@@ -101,6 +114,11 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Spring Boot.ProyectoApplication" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -134,6 +152,16 @@
+       <workItem from="1694827554013" duration="1304000" />
+       <workItem from="1694892269657" duration="422000" />
+       <workItem from="1695239238488" duration="4460000" />
++      <workItem from="1695922349318" duration="2065000" />
++      <workItem from="1695937335459" duration="1725000" />
++      <workItem from="1695957399777" duration="711000" />
++      <workItem from="1696198428850" duration="4606000" />
++      <workItem from="1696222208519" duration="24000" />
++      <workItem from="1696222405586" duration="2817000" />
++      <workItem from="1696364648604" duration="2050000" />
++      <workItem from="1696391273113" duration="1719000" />
++      <workItem from="1696480405747" duration="72000" />
++      <workItem from="1696826127659" duration="621000" />
+     </task>
+     <task id="LOCAL-00001" summary="Inicio de Codigo en Git">
+       <option name="closed" value="true" />
+@@ -286,27 +314,6 @@
+     <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="origin/master" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+     <option name="RECENT_FILTERS">
+       <map>
+         <entry key="Branch">
+@@ -338,8 +345,30 @@
+         </entry>
+       </map>
+     </option>
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/victor" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Inicio de Codigo en Git" />
+     <MESSAGE value="version subida en Git" />
+     <MESSAGE value="creacion de carpeta modelo entidades en Git" />
+@@ -348,6 +377,7 @@
+     <MESSAGE value="creacion de clases Administrador, ciudad, cuenta, EPS, Especialidad, estado Pqrs, medico, mensaje y tipoSangre con get, set y equals" />
+     <MESSAGE value="creacion de foraneas clases anteriores y tablas en Bases de Datos" />
+     <MESSAGE value="Merge remote-tracking branch 'origin/victor' into victor" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/victor' into victor" />
++    <MESSAGE value="creacion de las clases Horario, DiaLibre, EstadoCita, además de la union de las clases y verificacion en mysql" />
++    <option name="LAST_COMMIT_MESSAGE" value="creacion de las clases Horario, DiaLibre, EstadoCita, además de la union de las clases y verificacion en mysql" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,8 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,16 +14,17 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Ciudad extends Usuario implements Serializable{
+public class Ciudad implements Serializable{
+
+    @Id @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer codigo;
+
+    @Column(name = "nombre", nullable = false)
+    private String nombre;
 
     @OneToMany(mappedBy="ciudad")
     private List<Usuario> usuarios;
-
-    @Id
-    private Integer codigo;
-
-    @Getter
-    private String nombre;
 
 
 }

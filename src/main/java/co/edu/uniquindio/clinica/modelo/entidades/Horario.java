@@ -1,9 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,12 +14,19 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Horario extends  Medico implements Serializable {
+public class Horario implements Serializable {
 
-   // @Id
-    //private Integer codigo;
+    @Id @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int codigo;
+
+    @Column(name = "Dia")
     private LocalDate dia;
+
+    @Column(name = "Inicio")
     private LocalDateTime horaInicial;
+
+    @Column(name = "Fin")
     private LocalDateTime horaFinal;
 
     @ManyToOne

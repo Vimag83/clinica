@@ -2,6 +2,7 @@ package co.edu.uniquindio.clinica.modelo.entidades;
 
 import co.edu.uniquindio.clinica.enums.EstadoCita;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,9 @@ import java.util.List;
 @NoArgsConstructor
 @Setter@Getter
 public class Cita implements Serializable {
-    @Id
+
+    @Id @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigocita;
 
     @Column(name = "motivoConsula", nullable = false)
@@ -26,6 +29,8 @@ public class Cita implements Serializable {
 
     @Column(name = "fechaCita", nullable = false)
     private LocalDateTime fechadeAtencion;
+
+    @Column(name = "Fecha de Creación", nullable = false)
     private LocalDateTime fechadeCreacion;
 
     @ManyToOne
