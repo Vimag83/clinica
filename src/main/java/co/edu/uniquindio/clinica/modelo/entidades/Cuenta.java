@@ -1,10 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,14 +12,20 @@ import java.util.List;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Cuenta implements Serializable {
-    @OneToMany(mappedBy = "cuenta")
-    private List<Mensaje> mensajes;
+public class Cuenta implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private int codigo;
+    private Integer codigo;
+
+    @Column(name = "correo", unique = true, nullable = false)
     private String correo;
+
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @OneToMany(mappedBy = "cuenta")
+    private List<Mensaje> mensajes;
+
 }

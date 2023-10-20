@@ -1,6 +1,12 @@
 package co.edu.uniquindio.clinica.dto;
 
+import jakarta.persistence.Lob;
+import jakarta.validation.constraints.NotNull;
+
 public record EmailDTO(
-        String para, String asunto, String mensaje
+        @NotNull @Lob
+        String para,
+        String asunto,
+        String mensaje
 ) {
 }

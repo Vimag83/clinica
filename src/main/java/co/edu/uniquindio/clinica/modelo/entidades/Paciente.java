@@ -1,5 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
+import co.edu.uniquindio.clinica.enums.EPS;
+import co.edu.uniquindio.clinica.enums.TipoSangre;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
@@ -13,20 +15,21 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Getter@Setter
 @NoArgsConstructor
 public class Paciente extends Usuario implements Serializable {
 
+    @Column(name = "fechaNacimiento", nullable = false)
     private LocalDate fechaNacimiento;
+
+    @Column(length = 100)
     private String alergias;
 
-    @Column(name = "cedula", unique = true)
-    private String cedula;
+    @Column(nullable = false)
+    private EPS eps;
 
-    // No necesitas la relación @ManyToOne a Usuario aquí
-    @ManyToOne
-    private Usuario usuario;
+    @Column(nullable = false)
+    private TipoSangre tipoSangre;
 
     @OneToMany(mappedBy = "paciente")
     private List<Cita> citas;

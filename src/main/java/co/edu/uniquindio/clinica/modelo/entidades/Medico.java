@@ -1,9 +1,10 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
+import co.edu.uniquindio.clinica.enums.DiaLibre;
+import co.edu.uniquindio.clinica.enums.Especialidad;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,11 +13,18 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Medico extends Usuario implements Serializable{
+@AllArgsConstructor
+public class Medico extends Usuario implements Serializable {
 
-    private Especialidad especialidad;
+    @NotNull private Especialidad especialidad;
 
-   // @OneToMany(mappedBy = "medico")
-   // private List<Horario> horarios;
+    @Column(name = "descanso")
+    private DiaLibre diaLibre;
 
+    @OneToMany(mappedBy = "medico")
+    private List<Cita> citas;
+
+    @OneToMany(mappedBy = "medico")
+    private List<Horario> horarios;
+    //le quite el extends a horario y le coloque codigo al horario para dejar el mapeo.
 }

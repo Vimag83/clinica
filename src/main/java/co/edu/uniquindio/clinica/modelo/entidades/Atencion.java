@@ -1,7 +1,7 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,10 +12,23 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Setter@Getter
-public class Atencion extends Cita implements Serializable {
+public class Atencion implements Serializable {
 
-    private String diagnostico, tratamiento, notasMedicas;
-    //Este creo que debe ser de uno a uno con la cita, preguntar al profe
+    @Id @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer codigo;
+
+    @Lob()
+    @NotNull private String diagnostico;
+
+    @Lob()
+    @NotNull private String tratamiento;
+
+    @Column(name="notas médicas", length = 100)
+    @NotNull private String notasMedicas;
+
+    @OneToOne
+    private Cita cita;
 
     @OneToMany(mappedBy = "atencion")
     private List<OrdenMedica> ordenesMedicas;
